@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>GIF-Tastic</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <title>GIF-Tastic</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
-	<form id="movie-form">
-            <label for="movie-input">What's your GIF desire?</label>
-            <input type="text" id="movie-input">
-            <br>
-            <!-- Button triggers new movie to be added -->
-            <input id="add-movie" type="submit" value="CLICK ME TO ADD!">
+    <form id="gif-form">
+        <label for="gif-input">Type your GIF desire below!</label>
+        <br>
+        <input type="text" id="gif-input">
+        <br>
+        <!-- Button triggers new movie to be added -->
+        <button id="add-gif" type="submit">CLICK ME TO ADD!</button>
     </form>
-	<br>
-
-	<div id="gifButtons"></div>
-	
-	<div class="gif"></div>
-
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<script type ="text/javascript" src="assets/javascript/game.js"></script>
+    <div id="gifButtons"></div>
+    <div class="gifContainer">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
+
 </html>

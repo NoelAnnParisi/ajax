@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(105deg, #a366ff, #66ffd9);
+    margin: 2%;
+}
+
+form,
+button,
+input,
+#gif-input,
+#add-gif,
+.rating {
+    font-family: 'Pangolin', cursive;
+    line-height: 1.7;
+    font-size: medium;
+}
+
+button,
+input,
+#gif-input,
+#add-gif {
+    margin-bottom: 1%;
+}
+
+button {
+    margin-right: 1%;
+    border-radius: 5px;
+    background-color: white;
+    border: 0;
+}
+
+button:hover {
+    font-size: large;
+}
+
+img {
+    margin-right: 1%;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.gif {
+
+	display:inline-block;
+}
+
+.rating {
+	display: inline-block;
+	line-height: 1.5;
+}
+
+.gifContainer {
+
+    display: inline-block;
+}
+
+
+

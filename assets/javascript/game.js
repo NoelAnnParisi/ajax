@@ -1,10 +1,7 @@
-// create an array of strings, each one related to a topic that interests you. 
-// Save it to a variable called topics.
 var topics = ['cats', 'sandwiches', 'crabs', 'dogs', 'spongebob', 'crabs', 'Obama', 'Joe Biden', 'bromance', 'baby elephants'];
 var searchQuery;
 var queryURL;
 var newSearch;
-// research q, limit, rating
 
 var renderButtons = function() {
 
@@ -14,40 +11,22 @@ var renderButtons = function() {
     }
 }
 
-$('#add-movie').on('click', function(event) {
+$('#add-gif').on('click', function(event) {
 
-	$('#gifButtons').empty();
-
-	event.preventDefault();
-
-	newSearch = $('#movie-input').val();
-
-	topics.push(newSearch);
-
-	console.log(newSearch);
-
-	console.log(topics);
-
-	renderButtons();
-
-	$('input:text').val('');
+    $('#gifButtons').empty();
+    event.preventDefault();
+    newSearch = $('#gif-input').val();
+    topics.push(newSearch);
+    renderButtons();
+    $('input:text').val('');
 })
-
-
-renderButtons();
-
-
 
 $('#gifButtons').on('click', function(event) {
 
-	$('.gif').empty();
-
+    $('.gifContainer').empty();
     event.preventDefault();
-
     searchQuery = $(event.target).text();
-
-    console.log(queryURL = "http://api.giphy.com/v1/gifs/search?q="+searchQuery+"&limit=10&rating=g&api_key=dc6zaTOxFJmzC");
-
+    console.log(queryURL = "http://api.giphy.com/v1/gifs/search?q=" + searchQuery + "&limit=10&rating=g&api_key=dc6zaTOxFJmzC");
     console.log(searchQuery);
 
     $.ajax({
@@ -55,22 +34,37 @@ $('#gifButtons').on('click', function(event) {
         method: "GET"
     }).done(function(response) {
 
-    	console.log(response.data);
+        console.log(response.data);
 
-    	for (var i=0; i < 10; i++){
+        for (var i = 0; i < 10; i++) {
 
-    		imgTag = response.data[i].images.original.url;
+            var stillImage = response.data[i].images.original_still.url;
+            var videoGIF = response.data[i].images.original.url;
+            var ratingTag = response.data[i].rating;
+            $('.gifContainer').append('<div class= "rating">Rating:'+ratingTag+' <img src="'+stillImage+'" data-state="still" data-still="'+stillImage+'" data-animate="'+videoGIF+'" class="gif">');
+        }
 
-    		ratingTag = response.data[i].rating;
+        $('.gif').on('click', function() {
 
-    		$('.gif').append('<p>Rating:'+ratingTag+'</p>'+'<img src='+imgTag+'>');
-    	}
-        console.log(response);
-        // data > i > images > original > url 
+            var state = $(this).attr("data-state");
 
-        // same as above but original_still for the still
+
+            if (state === "still") {
+                $(this).attr({
+                    "src": $(this).attr('data-animate'),
+                    "data-state": "animate"
+                })
+            } else {
+                $(this).attr({
+                    'src': $(this).attr('data-still'),
+                    'data-state': 'still'
+                })
+            }
+        })
     })
-});
+})
+
+renderButtons();
 
 // Your app should take the topics in this array and create buttons in your HTML.
 // Try using a loop that appends a button for each string in the array.
