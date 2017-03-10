@@ -1,4 +1,4 @@
-var topics = ['cats', 'sandwiches', 'crabs', 'dogs', 'spongebob', 'crabs', 'Obama', 'Joe Biden', 'bromance', 'baby elephants'];
+var topics = ['cats', 'sandwiches', 'crabs', 'dogs', 'spongebob','Obama', 'Joe Biden', 'bromance', 'baby elephants'];
 var searchQuery;
 var queryURL;
 var newSearch;
