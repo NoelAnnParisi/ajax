@@ -26,7 +26,7 @@ $('#gifButtons').on('click', function(event) {
     $('.gifContainer').empty();
     event.preventDefault();
     searchQuery = $(event.target).text();
-    console.log(queryURL = "http://api.giphy.com/v1/gifs/search?q=" + searchQuery + "&limit=10&rating=g&api_key=dc6zaTOxFJmzC");
+    console.log(queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchQuery + "&limit=10&rating=g&api_key=dc6zaTOxFJmzC");
     console.log(searchQuery);
 
     $.ajax({
