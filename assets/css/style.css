@@ -14,6 +14,10 @@ input,
     font-size: medium;
 }
 
+form {
+    float: right;
+}
+
 button,
 input,
 #gif-input,
@@ -34,25 +38,35 @@ button:hover {
 
 img {
     margin-right: 1%;
-    width: auto;
-    max-width: 100%;
-    height: auto;
+    height: 40vh;
+    width: 30vw;
 }
 
 .gif {
-
-	display:inline-block;
-}
-
-.rating {
-	display: inline-block;
-	line-height: 1.5;
-}
-
-.gifContainer {
-
     display: inline-block;
 }
 
+.rating {
+    display: inline-block;
+    line-height: 1.5;
+}
 
+.gifContainer {
+    display: inline-block;
+}
 
+@media screen and (max-width: 640px) {
+    .gif,
+    .rating,
+    .gifContainer {
+        display: block;
+    }
+    form {
+        float: none;
+    }
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
