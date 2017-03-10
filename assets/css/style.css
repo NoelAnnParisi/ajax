@@ -55,7 +55,7 @@ img {
     display: inline-block;
 }
 
-@media screen and (max-width: 640px) {
+@media all and (max-width: 640px) {
     .gif,
     .rating,
     .gifContainer {
