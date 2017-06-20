@@ -9,3 +9,7 @@ Need to pass some time, or a chuckle? Then visit this site to discover some GIF'
 * Deployed on Heroku
 
 [Click here to check it out](https://frozen-beach-46586.herokuapp.com/)
+
+<p align='center'>
+  <img src="/READMEImage.png?raw=true" alt="ScreenShot of my site">
+</p>
