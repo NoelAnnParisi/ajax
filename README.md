@@ -7,9 +7,9 @@ Need to pass some time, or a chuckle? Then visit this site to discover some GIF'
 * jQuery
 * AJAX
 * Deployed on Heroku
-
+<p align='center'>
 [Click here to check it out](https://frozen-beach-46586.herokuapp.com/)
-
+</p>
 <p align='center'>
   <img src="/READMEImage.png?raw=true" alt="ScreenShot of my site">
 </p>
