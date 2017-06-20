@@ -7,3 +7,5 @@ Need to pass some time, or a chuckle? Then visit this site to discover some GIF'
 * jQuery
 * AJAX
 * Deployed on Heroku
+
+[Click here to check it out](https://frozen-beach-46586.herokuapp.com/)
